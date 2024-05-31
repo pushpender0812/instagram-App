@@ -23,23 +23,26 @@ const Navbar = () => {
 
     if (firebase.isLoggedIn) {
       return (
-        <div className='grid grid-cols-5 gap-10   h-screen'>
-          <div className='col-span-1  w-[400px] mr-[100px]  top-0 p-4'>
-            <div className='flex flex-col  bg-gray-100 w-[400px] gap-20 fixed'>
-              <i className='text-3xl font-bold pt-20'>Instagram by Pushpender</i>
-              <NavLink to={'/'} className='font-bold text-2xl'>🏠 Home</NavLink>
+        <div className='grid grid-cols-5 gap-4 h-screen'>
+          {/* Sidebar */}
+          <div className='col-span-1 fixed top-0 left-0 h-full bg-gray-100 p-4 md:w-[250px] w-[80px]'>
+            <div className='flex flex-col gap-6'>
+              <i className='md:text-3xl text-xl font-bold pt-20'>Instagram by Pushpender</i>
+              <NavLink to={'/'} className='font-bold md:text-2xl text-sm'>🏠 Home</NavLink>
               <NavLink to={'/addPosts'} className='text-xl flex items-center'>
-                <b className='ml-28'>[+]</b> Create Post
+                <b className='md:ml-0 ml-2'>[+]</b>
+                <span className='md:inline hidden'>Create Post</span>
               </NavLink>
-              <button onClick={logout} className='text-xl '>Log Out</button>
+              <button onClick={logout} className='md:text-xl md:text-left text-sm text-left'>Log Out</button>
               {user && (
                 <div className='mt-6'>
-                  <span className='block'>You have Signed In As</span>
-                  <p className='text-2xl text-red-600'>{user.displayName || user.email}</p>
+                  <span className='block md:text-base text-xs'>You have Signed In As</span>
+                  <p className='md:text-2xl text-sm text-red-600'>{user.displayName || user.email}</p>
                 </div>
               )}
             </div>
           </div>
+          
          
         </div>
       );
