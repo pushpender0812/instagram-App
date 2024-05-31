@@ -24,7 +24,7 @@ const Navbar = () => {
     if (firebase.isLoggedIn) {
         return (
             <div className='flex flex-cols-4 gap-48'>
-              <i className='text-3xl font-bold'>Intagram</i>
+              <i className='text-3xl font-bold'>Intagram by Pushpender</i>
               <NavLink  to={'/'}><p className='font-bold text-2xl'>🏠︎ Home</p></NavLink>
               <NavLink to={'/addPosts'}><p className='flex text-xl'> <b>[+]</b> Create</p></NavLink>
               <NavLink onClick={logout}><p>Log Out</p></NavLink>
