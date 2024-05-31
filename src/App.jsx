@@ -13,7 +13,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-  <>
+  <div className='flex'>
   <Navbar/>
   <Routes>
     <Route path='/'  element={<Home/>}/>
@@ -21,7 +21,7 @@ function App() {
     <Route path='login'  element={<Login/>}/>
     <Route path='singup'  element={<Registration/>}/>
   </Routes>
-  </>
+  </div>
   )
 }
 
