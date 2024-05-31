@@ -25,7 +25,7 @@ const Navbar = () => {
       return (
         <div className='grid grid-cols-5 gap-4 h-screen'>
           {/* Sidebar */}
-          <div className='col-span-1 fixed top-0 left-0 h-full bg-gray-100 p-4 md:w-[250px] w-[80px]'>
+          <div className='col-span-1 fixed top-0 left-0 h-full bg-gray-100 p-4 md:w-[150px] w-[80px]'>
             <div className='flex flex-col gap-6'>
               <i className='md:text-3xl text-xl font-bold pt-20'>Instagram by Pushpender</i>
               <NavLink to={'/'} className='font-bold md:text-2xl text-sm'>🏠 Home</NavLink>
